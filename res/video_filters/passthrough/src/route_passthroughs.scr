@@ -1,0 +1,52 @@
+setattr main edit-mode Read-Write
+select net data_reg_i<0>
+select net data_reg_o<0>
+select net data_reg_i<1>
+select net data_reg_o<1>
+select net data_reg_i<2>
+select net data_reg_o<2>
+select net data_reg_i<3>
+select net data_reg_o<3>
+select net data_reg_i<4>
+select net data_reg_o<4>
+select net data_reg_i<5>
+select net data_reg_o<5>
+select net data_reg_i<6>
+select net data_reg_o<6>
+select net data_reg_i<7>
+select net data_reg_o<7>
+select net data_reg_i<8>
+select net data_reg_o<8>
+select net data_reg_i<9>
+select net data_reg_o<9>
+select net data_reg_i<10>
+select net data_reg_o<10>
+select net data_reg_i<11>
+select net data_reg_o<11>
+select net data_reg_i<12>
+select net data_reg_o<12>
+select net data_reg_i<13>
+select net data_reg_o<13>
+select net data_reg_i<14>
+select net data_reg_o<14>
+select net data_reg_i<15>
+select net data_reg_o<15>
+select net data_reg_i<16>
+select net data_reg_o<16>
+select net data_reg_i<17>
+select net data_reg_o<17>
+select net data_reg_i<18>
+select net data_reg_o<18>
+select net data_reg_i<19>
+select net data_reg_o<19>
+select net data_reg_i<20>
+select net data_reg_o<20>
+select net data_reg_i<21>
+select net data_reg_o<21>
+select net data_reg_i<22>
+select net data_reg_o<22>
+select net data_reg_i<23>
+select net data_reg_o<23>
+autoroute -resource
+save
+exit

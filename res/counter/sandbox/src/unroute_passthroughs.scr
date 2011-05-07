@@ -1,0 +1,12 @@
+setattr main edit-mode Read-Write
+select net passthrough_wires<0>
+select net passthrough_wires<1>
+select net passthrough_wires<2>
+select net passthrough_wires<3>
+select net passthrough_wires<4>
+select net passthrough_wires<5>
+select net passthrough_wires<6>
+select net passthrough_wires<7>
+delete
+save
+exit

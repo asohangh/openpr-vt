@@ -1,0 +1,95 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   SPARC M2.1 L.68
+#Current Working Directory:
+#:D   /home/tannous/pr_design/XUPV5/increment/src/precompiled
+#Host Name:
+#:H   ccm14
+#Date/Time:
+#:T   Wed Sep 22 13:20:25 2010
+#------------------------------
+	#Reading /home/tannous/pr_design/XUPV5/increment/src/precompiled/busmacro_xc5v_async_vert_in_ll.nmc...
+	#Loading device for application Rf_Device from file '5vsx95t.nph' in environment /local/Xilinx11.1/ISE.
+	#   "Y:\bus_macros\busmacro_xc5v_sync_vert_in_lm" is an NCD, version 3.2, device xc5vsx95t, package ff1136, speed -1
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+select -k comp '$COMP_0'
+	#2
+unselect -all
+	#3
+unselect -all
+	#4
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X2Y0",  type = SLICEL  (RPM grid X13Y0)
+	#5
+unselect -all
+	#6
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X3Y0",  type = SLICEL  (RPM grid X15Y0)
+	#7
+unselect -all
+	#8
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X2Y0",  type = SLICEL  (RPM grid X13Y0)
+	#9
+unselect -all
+	#10
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X3Y0",  type = SLICEL  (RPM grid X15Y0)
+	#11
+unselect -all
+	#12
+select comp '$COMP_4'
+	#comp "$COMP_4",  site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#13
+unselect -all
+	#14
+select comp '$COMP_5'
+	#comp "$COMP_5",  site "SLICE_X3Y3",  type = SLICEL  (RPM grid X15Y6)
+	#15
+unselect -all
+	#16
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X3Y0",  type = SLICEL  (RPM grid X15Y0)
+	#17
+unselect -all
+	#18
+unselect -all
+	#19
+unselect -all
+	#20
+select comp '$COMP_4'
+	#comp "$COMP_4",  site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#21
+unselect -all
+	#22
+select comp '$COMP_5'
+	#comp "$COMP_5",  site "SLICE_X3Y3",  type = SLICEL  (RPM grid X15Y6)
+	#23
+unselect -all
+	#24
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X2Y0",  type = SLICEL  (RPM grid X13Y0)
+	#25
+unselect -all
+	#26
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X3Y0",  type = SLICEL  (RPM grid X15Y0)
+	#27
+unselect -all
+	#28
+post attr main
+	#Getting available speed grades of the device...
+	#29
+unpost main
+	#30
+unselect -all
+	#31
+unselect -all
+	#32
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X3Y0",  type = SLICEL  (RPM grid X15Y0)
+	#33
+unselect -all

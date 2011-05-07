@@ -1,0 +1,28 @@
+setattr main edit-mode Read-Write
+select net passthrough<0>
+select net passthrough<1>
+select net passthrough<2>
+select net passthrough<3>
+select net passthrough<4>
+select net passthrough<5>
+select net passthrough<6>
+select net passthrough<7>
+select net passthrough<8>
+select net passthrough<9>
+select net passthrough<10>
+select net passthrough<11>
+select net passthrough<12>
+select net passthrough<13>
+select net passthrough<14>
+select net passthrough<15>
+select net passthrough<16>
+select net passthrough<17>
+select net passthrough<18>
+select net passthrough<19>
+select net passthrough<20>
+select net passthrough<21>
+select net passthrough<22>
+select net passthrough<23>
+autoroute -resource
+save
+exit

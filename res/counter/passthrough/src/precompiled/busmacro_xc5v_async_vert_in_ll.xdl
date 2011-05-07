@@ -1,0 +1,230 @@
+
+# =======================================================
+# XDL NCD CONVERSION MODE $Revision: 1.01$
+# time: Sun Sep 26 17:20:11 2010
+
+# =======================================================
+
+
+
+# =======================================================
+# The syntax for the design statement is:                
+# design <design_name> <part> <ncd version>;             
+# or                                                     
+# design <design_name> <device> <package> <speed> <ncd_version>
+# =======================================================
+design "__XILINX_NMC_MACRO" xc5vsx95tff1136-1;
+
+# =======================================================
+# The syntax for modules is:
+#     module <name> <inst_name> ;
+#     port <name> <inst_name> <inst_pin> ;
+#     .
+#     .
+#     instance ... ;
+#     .
+#     .
+#     net ... ;
+#     .
+#     .
+#     endmodule <name> ;
+# =======================================================
+
+# =======================================================
+# MODULE of "Y:\bus_macros\busmacro_xc5v_sync_vert_in_lm"
+# =======================================================
+module "Y:\bus_macros\busmacro_xc5v_sync_vert_in_lm" "$COMP_3" , cfg "_SYSTEM_MACRO::FALSE" ; 
+  port "output7" "$COMP_3" "D";
+  port "output6" "$COMP_3" "C";
+  port "output5" "$COMP_3" "B";
+  port "output4" "$COMP_3" "A";
+  port "output3" "$COMP_0" "D";
+  port "output2" "$COMP_0" "C";
+  port "output1" "$COMP_0" "B";
+  port "output0" "$COMP_0" "A";
+  port "input7" "$COMP_5" "D1";
+  port "input6" "$COMP_5" "C1";
+  port "input5" "$COMP_5" "B1";
+  port "input4" "$COMP_5" "A1";
+  port "input3" "$COMP_4" "D1";
+  port "input2" "$COMP_4" "C1";
+  port "input1" "$COMP_4" "B1";
+  port "input0" "$COMP_4" "A1";
+  inst "$COMP_3" "SLICEL",placed CLBLL_X2Y0 SLICE_X3Y0  ,
+    cfg " A5LUT::#OFF A6LUT:$COMP_3.A6LUT:#LUT:O6=A1 ACY0::#OFF AFF::#OFF
+         AFFINIT::#OFF AFFMUX::#OFF AFFSR::#OFF AOUTMUX::#OFF AUSED::0 B5LUT::#OFF
+         B6LUT:$COMP_3.B6LUT:#LUT:O6=A1 BCY0::#OFF BFF::#OFF BFFINIT::#OFF
+         BFFMUX::#OFF BFFSR::#OFF BOUTMUX::#OFF BUSED::0 C5LUT::#OFF C6LUT:$COMP_3.C6LUT:#LUT:O6=A1
+         CCY0::#OFF CEUSED::#OFF CFF::#OFF CFFINIT::#OFF CFFMUX::#OFF CFFSR::#OFF
+         CLKINV::#OFF COUTMUX::#OFF COUTUSED::#OFF CUSED::0 D5LUT::#OFF
+         D6LUT:$COMP_3.D6LUT:#LUT:O6=A1 DCY0::#OFF DFF::#OFF DFFINIT::#OFF
+         DFFMUX::#OFF DFFSR::#OFF DOUTMUX::#OFF DUSED::0 PRECYINIT::#OFF
+         REVUSED::#OFF SRUSED::#OFF SYNC_ATTR::#OFF "
+    ;
+  inst "$COMP_4" "SLICEL",placed CLBLL_X2Y3 SLICE_X2Y3  ,
+    cfg " A5LUT::#OFF A6LUT:$COMP_4.A6LUT:#LUT:O6=A1 ACY0::#OFF AFF::#OFF
+         AFFINIT::#OFF AFFMUX::#OFF AFFSR::#OFF AOUTMUX::#OFF AUSED::0 B5LUT::#OFF
+         B6LUT:$COMP_4.B6LUT:#LUT:O6=A1 BCY0::#OFF BFF::#OFF BFFINIT::#OFF
+         BFFMUX::#OFF BFFSR::#OFF BOUTMUX::#OFF BUSED::0 C5LUT::#OFF C6LUT:$COMP_4.C6LUT:#LUT:O6=A1
+         CCY0::#OFF CEUSED::#OFF CFF::#OFF CFFINIT::#OFF CFFMUX::#OFF CFFSR::#OFF
+         CLKINV::#OFF COUTMUX::#OFF COUTUSED::#OFF CUSED::0 D5LUT::#OFF
+         D6LUT:$COMP_4.D6LUT:#LUT:O6=A1 DCY0::#OFF DFF::#OFF DFFINIT::#OFF
+         DFFMUX::#OFF DFFSR::#OFF DOUTMUX::#OFF DUSED::0 PRECYINIT::#OFF
+         REVUSED::#OFF SRUSED::#OFF SYNC_ATTR::#OFF  _ROUTETHROUGH:C:CMUX
+          _ROUTETHROUGH:D:DMUX "
+    ;
+  inst "$COMP_5" "SLICEL",placed CLBLL_X2Y3 SLICE_X3Y3  ,
+    cfg " A5LUT::#OFF A6LUT:$COMP_5.A6LUT:#LUT:O6=A1 ACY0::#OFF AFF::#OFF
+         AFFINIT::#OFF AFFMUX::#OFF AFFSR::#OFF AOUTMUX::#OFF AUSED::0 B5LUT::#OFF
+         B6LUT:$COMP_5.B6LUT:#LUT:O6=A1 BCY0::#OFF BFF::#OFF BFFINIT::#OFF
+         BFFMUX::#OFF BFFSR::#OFF BOUTMUX::#OFF BUSED::0 C5LUT::#OFF C6LUT:$COMP_5.C6LUT:#LUT:O6=A1
+         CCY0::#OFF CEUSED::#OFF CFF::#OFF CFFINIT::#OFF CFFMUX::#OFF CFFSR::#OFF
+         CLKINV::#OFF COUTMUX::#OFF COUTUSED::#OFF CUSED::0 D5LUT::#OFF
+         D6LUT:$COMP_5.D6LUT:#LUT:O6=A1 DCY0::#OFF DFF::#OFF DFFINIT::#OFF
+         DFFMUX::#OFF DFFSR::#OFF DOUTMUX::#OFF DUSED::0 PRECYINIT::#OFF
+         REVUSED::#OFF SRUSED::#OFF SYNC_ATTR::#OFF  _ROUTETHROUGH:B:BMUX
+          _ROUTETHROUGH:C:CMUX "
+    ;
+  inst "$COMP_0" "SLICEL",placed CLBLL_X2Y0 SLICE_X2Y0  ,
+    cfg " A5LUT::#OFF A6LUT:$COMP_0.A6LUT:#LUT:O6=A1 ACY0::#OFF AFF::#OFF
+         AFFINIT::#OFF AFFMUX::#OFF AFFSR::#OFF AOUTMUX::#OFF AUSED::0 B5LUT::#OFF
+         B6LUT:$COMP_0.B6LUT:#LUT:O6=A1 BCY0::#OFF BFF::#OFF BFFINIT::#OFF
+         BFFMUX::#OFF BFFSR::#OFF BOUTMUX::#OFF BUSED::0 C5LUT::#OFF C6LUT:$COMP_0.C6LUT:#LUT:O6=A1
+         CCY0::#OFF CEUSED::#OFF CFF::#OFF CFFINIT::#OFF CFFMUX::#OFF CFFSR::#OFF
+         CLKINV::#OFF COUTMUX::#OFF COUTUSED::#OFF CUSED::0 D5LUT::#OFF
+         D6LUT:$COMP_0.D6LUT:#LUT:O6=A1 DCY0::#OFF DFF::#OFF DFFINIT::#OFF
+         DFFMUX::#OFF DFFSR::#OFF DOUTMUX::#OFF DUSED::0 PRECYINIT::#OFF
+         REVUSED::#OFF SRUSED::#OFF SYNC_ATTR::#OFF "
+    ;
+  net "$NET_8" , 
+    outpin "$COMP_3" D ,
+    ;
+  net "$NET_9" , 
+    outpin "$COMP_3" C ,
+    ;
+  net "$NET_10" , 
+    outpin "$COMP_3" B ,
+    ;
+  net "$NET_11" , 
+    outpin "$COMP_3" A ,
+    ;
+  net "$NET_12" , 
+    outpin "$COMP_0" D ,
+    ;
+  net "$NET_13" , 
+    outpin "$COMP_0" C ,
+    ;
+  net "$NET_14" , 
+    outpin "$COMP_0" B ,
+    ;
+  net "$NET_15" , 
+    outpin "$COMP_0" A ,
+    ;
+  net "$NET_0" , 
+    inpin "$COMP_5" D1 ,
+    ;
+  net "$NET_1" , 
+    inpin "$COMP_5" C1 ,
+    ;
+  net "$NET_2" , 
+    inpin "$COMP_5" B1 ,
+    ;
+  net "$NET_3" , 
+    inpin "$COMP_5" A1 ,
+    ;
+  net "$NET_4" , 
+    inpin "$COMP_4" D1 ,
+    ;
+  net "$NET_5" , 
+    inpin "$COMP_4" C1 ,
+    ;
+  net "$NET_6" , 
+    inpin "$COMP_4" B1 ,
+    ;
+  net "$NET_7" , 
+    inpin "$COMP_4" A1 ,
+    ;
+  net "$NET_19" , 
+    outpin "$COMP_5" A ,
+    inpin "$COMP_3" A1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B5 -> L_A1 , 
+    pip CLBLL_X2Y3 L_A -> SITE_LOGIC_OUTS8 , 
+    pip INT_X1Y0 SL2MID2 -> EL2BEG2 , 
+    pip INT_X1Y2 WS2END0 -> SL2BEG_N2 , 
+    pip INT_X2Y0 EL2MID2 -> IMUX_B5 , 
+    pip INT_X2Y3 LOGIC_OUTS8 -> WS2BEG0 , 
+    ;
+  net "$NET_18" , 
+    outpin "$COMP_5" B ,
+    inpin "$COMP_3" B1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B41 -> L_B1 , 
+    pip CLBLL_X2Y3 L_B -> L_BMUX ,  #  _ROUTETHROUGH:B:BMUX "$COMP_5" B -> BMUX
+    pip CLBLL_X2Y3 L_BMUX -> SITE_LOGIC_OUTS17 , 
+    pip INT_X2Y0 SW2MID2 -> IMUX_B41 , 
+    pip INT_X2Y1 SR2END2 -> SW2BEG2 , 
+    pip INT_X2Y3 LOGIC_OUTS17 -> SR2BEG2 , 
+    ;
+  net "$NET_17" , 
+    outpin "$COMP_5" C ,
+    inpin "$COMP_3" C1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B6 -> L_C1 , 
+    pip CLBLL_X2Y3 L_C -> L_CMUX ,  #  _ROUTETHROUGH:C:CMUX "$COMP_5" C -> CMUX
+    pip CLBLL_X2Y3 L_CMUX -> SITE_LOGIC_OUTS18 , 
+    pip INT_X2Y0 BYP2 -> BYP_BOUNCE2 , 
+    pip INT_X2Y0 BYP_BOUNCE2 -> IMUX_B6 , 
+    pip INT_X2Y0 SR2END2 -> BYP2 , 
+    pip INT_X2Y2 LOGIC_OUTS_S18 -> SR2BEG2 , 
+    ;
+  net "$NET_16" , 
+    outpin "$COMP_5" D ,
+    inpin "$COMP_3" D1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B42 -> L_D1 , 
+    pip CLBLL_X2Y3 L_D -> SITE_LOGIC_OUTS11 , 
+    pip INT_X2Y0 CTRL2 -> CTRL_BOUNCE2 , 
+    pip INT_X2Y0 CTRL_BOUNCE2 -> IMUX_B42 , 
+    pip INT_X2Y0 SW2MID1 -> CTRL2 , 
+    pip INT_X2Y1 SL2END1 -> SW2BEG1 , 
+    pip INT_X2Y3 LOGIC_OUTS11 -> SL2BEG1 , 
+    ;
+  net "$NET_23" , 
+    outpin "$COMP_4" A ,
+    inpin "$COMP_0" A1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B29 -> M_A1 , 
+    pip CLBLL_X2Y3 M_A -> SITE_LOGIC_OUTS12 , 
+    pip INT_X2Y0 EL2BEG2 -> IMUX_B29 , 
+    pip INT_X2Y0 SL2END2 -> EL2BEG2 , 
+    pip INT_X2Y3 LOGIC_OUTS12 -> SL2BEG_N2 , 
+    ;
+  net "$NET_22" , 
+    outpin "$COMP_4" B ,
+    inpin "$COMP_0" B1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B17 -> M_B1 , 
+    pip CLBLL_X2Y3 M_B -> SITE_LOGIC_OUTS13 , 
+    pip INT_X2Y0 FAN_BOUNCE_S0 -> IMUX_B17 , 
+    pip INT_X2Y1 FAN0 -> FAN_BOUNCE0 , 
+    pip INT_X2Y1 SL2END0 -> FAN0 , 
+    pip INT_X2Y3 LOGIC_OUTS13 -> SL2BEG0 , 
+    ;
+  net "$NET_21" , 
+    outpin "$COMP_4" C ,
+    inpin "$COMP_0" C1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B30 -> M_C1 , 
+    pip CLBLL_X2Y3 M_C -> M_CMUX ,  #  _ROUTETHROUGH:C:CMUX "$COMP_4" C -> CMUX
+    pip CLBLL_X2Y3 M_CMUX -> SITE_LOGIC_OUTS22 , 
+    pip INT_X2Y0 SE2MID0 -> IMUX_B30 , 
+    pip INT_X2Y1 SR2END0 -> SE2BEG0 , 
+    pip INT_X2Y3 LOGIC_OUTS22 -> SR2BEG0 , 
+    ;
+  net "$NET_20" , 
+    outpin "$COMP_4" D ,
+    inpin "$COMP_0" D1 ,
+    pip CLBLL_X2Y0 SITE_IMUX_B18 -> M_D1 , 
+    pip CLBLL_X2Y3 M_D -> M_DMUX ,  #  _ROUTETHROUGH:D:DMUX "$COMP_4" D -> DMUX
+    pip CLBLL_X2Y3 M_DMUX -> SITE_LOGIC_OUTS23 , 
+    pip INT_X2Y0 FAN2 -> FAN_BOUNCE2 , 
+    pip INT_X2Y0 FAN_BOUNCE2 -> IMUX_B18 , 
+    pip INT_X2Y0 SR2END1 -> FAN2 , 
+    pip INT_X2Y2 SW2MID1 -> SR2BEG1 , 
+    pip INT_X2Y3 LOGIC_OUTS23 -> SW2BEG1 , 
+    ;
+endmodule "Y:\bus_macros\busmacro_xc5v_sync_vert_in_lm" ;

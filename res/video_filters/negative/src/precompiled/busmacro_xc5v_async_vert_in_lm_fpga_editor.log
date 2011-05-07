@@ -1,0 +1,394 @@
+#:C139   
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   SPARC M2.1 L.68
+#Current Working Directory:
+#:D   /home/tannous/pr_design/xupv5/video_filters/grayscale/src/precompiled
+#Host Name:
+#:H   ccm14
+#Date/Time:
+#:T   Mon Oct 11 12:58:24 2010
+#------------------------------
+	#Reading /home/tannous/pr_design/xupv5/video_filters/grayscale/src/precompiled/busmacro_xc5v_async_vert_in_lm.nmc...
+	#   "Y:\bus_macros\busmacro_xc5v_sync_vert_in_ll" is an NCD, version 3.2, device xc5vsx95t, package ff1136, speed -1
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+unselect -all
+	#2
+select site 'SLICE_X0Y2'
+	#site "SLICE_X0Y2",  type = SLICEM  (RPM grid X9Y4)
+	#3
+unselect -all
+	#4
+select site 'SLICE_X1Y2'
+	#site "SLICE_X1Y2",  type = SLICEL  (RPM grid X11Y4)
+	#5
+unselect -all
+	#6
+select site 'SLICE_X0Y1'
+	#site "SLICE_X0Y1",  type = SLICEM  (RPM grid X9Y2)
+	#7
+unselect -all
+	#8
+select site 'SLICE_X1Y1'
+	#site "SLICE_X1Y1",  type = SLICEL  (RPM grid X11Y2)
+	#9
+unselect -all
+	#10
+select site 'SLICE_X0Y4'
+	#site "SLICE_X0Y4",  type = SLICEM  (RPM grid X9Y8)
+	#11
+unselect -all
+	#12
+select site 'SLICE_X1Y4'
+	#site "SLICE_X1Y4",  type = SLICEL  (RPM grid X11Y8)
+	#13
+unselect -all
+	#14
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X0Y0",  type = SLICEL  (RPM grid X9Y0)
+	#15
+unselect -all
+	#16
+select site 'SLICE_X0Y1'
+	#site "SLICE_X0Y1",  type = SLICEM  (RPM grid X9Y2)
+	#17
+unselect -all
+	#18
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X0Y0",  type = SLICEL  (RPM grid X9Y0)
+	#19
+unselect -all
+	#20
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X0Y0",  type = SLICEL  (RPM grid X9Y0)
+	#21
+post block
+	#22
+unselect -all
+	#23
+select site 'SLICE_X0Y1'
+	#site "SLICE_X0Y1",  type = SLICEM  (RPM grid X9Y2)
+	#24
+unselect -all
+	#25
+select site 'SLICE_X0Y1'
+	#site "SLICE_X0Y1",  type = SLICEM  (RPM grid X9Y2)
+	#26
+post block
+	#27
+unselect -all
+	#28
+select site 'SLICE_X0Y4'
+	#site "SLICE_X0Y4",  type = SLICEM  (RPM grid X9Y8)
+	#29
+unselect -all
+	#30
+select site 'SLICE_X0Y4'
+	#site "SLICE_X0Y4",  type = SLICEM  (RPM grid X9Y8)
+	#31
+post block
+	#32
+unselect -all
+	#33
+select site 'SLICE_X0Y2'
+	#site "SLICE_X0Y2",  type = SLICEM  (RPM grid X9Y4)
+	#34
+unselect -all
+	#35
+select site 'SLICE_X0Y2'
+	#site "SLICE_X0Y2",  type = SLICEM  (RPM grid X9Y4)
+	#36
+unselect -all
+	#37
+select site 'SLICE_X0Y2'
+	#site "SLICE_X0Y2",  type = SLICEM  (RPM grid X9Y4)
+	#38
+post block
+	#39
+unselect -all
+	#40
+select site 'SLICE_X1Y2'
+	#site "SLICE_X1Y2",  type = SLICEL  (RPM grid X11Y4)
+	#41
+unselect -all
+	#42
+select site 'SLICE_X1Y2'
+	#site "SLICE_X1Y2",  type = SLICEL  (RPM grid X11Y4)
+	#43
+post block
+	#44
+unselect -all
+	#45
+select net '$NET_21'
+	#net "$NET_21"
+	#46
+unselect -all
+	#47
+select net '$NET_14'
+	#net "$NET_14"
+	#48
+post block
+	#ERROR:FPGAEditor:79 - The "post block" command without any other arguments cannot
+	#be performed unless the selection contains only a single site
+	#or single component.  Change the selection and try again.
+	#49
+unselect -all
+	#50
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X0Y0",  type = SLICEL  (RPM grid X9Y0)
+	#51
+unselect -all
+	#52
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X0Y0",  type = SLICEL  (RPM grid X9Y0)
+	#53
+post block
+	#54
+unselect -all
+	#55
+select net '$NET_16'
+	#net "$NET_16"
+	#56
+unselect -all
+	#57
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X1Y0",  type = SLICEL  (RPM grid X11Y0)
+	#58
+unselect -all
+	#59
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X1Y0",  type = SLICEL  (RPM grid X11Y0)
+	#60
+post block
+	#61
+unselect -all
+	#62
+select site 'SLICE_X2Y0'
+	#site "SLICE_X2Y0",  type = SLICEL  (RPM grid X13Y0)
+	#63
+unselect -all
+	#64
+select site 'SLICE_X2Y0'
+	#site "SLICE_X2Y0",  type = SLICEL  (RPM grid X13Y0)
+	#65
+unselect -all
+	#66
+select site 'SLICE_X2Y0'
+	#site "SLICE_X2Y0",  type = SLICEL  (RPM grid X13Y0)
+	#67
+post block
+	#68
+unselect -all
+	#69
+select site 'SLICE_X2Y3'
+	#site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#70
+unselect -all
+	#71
+select site 'SLICE_X2Y3'
+	#site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#72
+unselect -all
+	#73
+select site 'SLICE_X2Y3'
+	#site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#74
+unselect -all
+	#75
+select site 'SLICE_X2Y3'
+	#site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#76
+unselect -all
+	#77
+select site 'SLICE_X2Y3'
+	#site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#78
+unselect -all
+	#79
+select site 'SLICE_X2Y3'
+	#site "SLICE_X2Y3",  type = SLICEL  (RPM grid X13Y6)
+	#80
+post block
+	#81
+unselect -all
+	#82
+select site 'SLICE_X4Y1'
+	#site "SLICE_X4Y1",  type = SLICEM  (RPM grid X17Y2)
+	#83
+unselect -all
+	#84
+select site 'SLICE_X4Y0'
+	#site "SLICE_X4Y0",  type = SLICEM  (RPM grid X17Y0)
+	#85
+unselect -all
+	#86
+select site 'SLICE_X5Y0'
+	#site "SLICE_X5Y0",  type = SLICEL  (RPM grid X19Y0)
+	#87
+unselect -all
+	#88
+select site 'SLICE_X4Y0'
+	#site "SLICE_X4Y0",  type = SLICEM  (RPM grid X17Y0)
+	#89
+unselect -all
+	#90
+select site 'SLICE_X4Y0'
+	#site "SLICE_X4Y0",  type = SLICEM  (RPM grid X17Y0)
+	#91
+unselect -all
+	#92
+select site 'SLICE_X4Y0'
+	#site "SLICE_X4Y0",  type = SLICEM  (RPM grid X17Y0)
+	#93
+post block
+	#94
+unselect -all
+	#95
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X0Y0",  type = SLICEL  (RPM grid X9Y0)
+	#96
+unselect -all
+	#97
+select -k comp '$COMP_0'
+	#98
+unselect -all
+	#99
+select -k comp '$COMP_0'
+	#100
+select -k site 'SLICE_X4Y0'
+	#101
+swap
+	#
+	#Wirelength Stats for nets on all pins. NumPins: 4
+	#
+	#Phase  1  : 4 unrouted;      REAL time: 5 secs 
+	#
+	#Phase  2  : 4 unrouted;      REAL time: 5 secs 
+	#
+	#Phase  3  : 0 unrouted;      REAL time: 14 secs 
+	#
+	#Phase  4  : 0 unrouted;      REAL time: 14 secs 
+	#Completed route status: 4 of 8 nets are fully routed.
+	#102
+setattr main edit-mode toggle
+	#103
+unselect -all
+	#104
+unselect -all
+	#105
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X1Y0",  type = SLICEL  (RPM grid X11Y0)
+	#106
+unselect -all
+	#107
+select -k comp '$COMP_3'
+	#108
+unselect -all
+	#109
+select -k comp '$COMP_3'
+	#110
+select -k site 'SLICE_X5Y0'
+	#111
+swap
+	#
+	#Wirelength Stats for nets on all pins. NumPins: 4
+	#
+	#Phase  1  : 4 unrouted;      REAL time: 4 secs 
+	#
+	#Phase  2  : 4 unrouted;      REAL time: 4 secs 
+	#
+	#Phase  3  : 0 unrouted;      REAL time: 13 secs 
+	#
+	#Phase  4  : 0 unrouted;      REAL time: 13 secs 
+	#Completed route status: 4 of 8 nets are fully routed.
+	#112
+unselect -all
+	#113
+unselect -all
+	#114
+select site 'SLICE_X0Y0'
+	#site "SLICE_X0Y0",  type = SLICEM  (RPM grid X9Y0)
+	#115
+unselect -all
+	#116
+select site 'SLICE_X0Y0'
+	#site "SLICE_X0Y0",  type = SLICEM  (RPM grid X9Y0)
+	#117
+unselect -all
+	#118
+select site 'SLICE_X0Y0'
+	#site "SLICE_X0Y0",  type = SLICEM  (RPM grid X9Y0)
+	#119
+post block
+	#120
+unselect -all
+	#121
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X4Y0",  type = SLICEL  (RPM grid X17Y0)
+	#122
+unselect -all
+	#123
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X4Y0",  type = SLICEL  (RPM grid X17Y0)
+	#124
+unselect -all
+	#125
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X4Y0",  type = SLICEL  (RPM grid X17Y0)
+	#126
+post block
+	#127
+unselect -all
+	#128
+select -k comp '$COMP_0'
+	#129
+unselect -all
+	#130
+select -k comp '$COMP_0'
+	#131
+select -k site 'SLICE_X0Y0'
+	#132
+swap
+	#
+	#Wirelength Stats for nets on all pins. NumPins: 4
+	#
+	#Phase  1  : 4 unrouted;      REAL time: 4 secs 
+	#
+	#Phase  2  : 4 unrouted;      REAL time: 4 secs 
+	#
+	#Phase  3  : 0 unrouted;      REAL time: 14 secs 
+	#
+	#Phase  4  : 0 unrouted;      REAL time: 14 secs 
+	#Completed route status: 4 of 8 nets are fully routed.
+	#133
+unselect -all
+	#134
+select comp '$COMP_3'
+	#comp "$COMP_3",  site "SLICE_X5Y0",  type = SLICEL  (RPM grid X19Y0)
+	#135
+unselect -all
+	#136
+select -k comp '$COMP_3'
+	#137
+unselect -all
+	#138
+select -k comp '$COMP_3'
+	#139
+select -k site 'SLICE_X1Y0'
+	#140
+swap
+	#
+	#Wirelength Stats for nets on all pins. NumPins: 4
+	#
+	#Phase  1  : 4 unrouted;      REAL time: 4 secs 
+	#
+	#Phase  2  : 4 unrouted;      REAL time: 4 secs 
+	#
+	#Phase  3  : 0 unrouted;      REAL time: 13 secs 
+	#
+	#Phase  4  : 0 unrouted;      REAL time: 13 secs 
+	#Completed route status: 4 of 8 nets are fully routed.
+	#141
+unselect -all

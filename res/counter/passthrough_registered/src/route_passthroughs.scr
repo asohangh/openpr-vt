@@ -1,0 +1,20 @@
+setattr main edit-mode Read-Write
+select net data_reg_i<0>
+select net data_reg_o<0>
+select net data_reg_i<1>
+select net data_reg_o<1>
+select net data_reg_i<2>
+select net data_reg_o<2>
+select net data_reg_i<3>
+select net data_reg_o<3>
+select net data_reg_i<4>
+select net data_reg_o<4>
+select net data_reg_i<5>
+select net data_reg_o<5>
+select net data_reg_i<6>
+select net data_reg_o<6>
+select net data_reg_i<7>
+select net data_reg_o<7>
+autoroute -all
+save
+exit

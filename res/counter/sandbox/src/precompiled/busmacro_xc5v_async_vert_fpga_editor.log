@@ -1,0 +1,18 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   SPARC M2.1 L.70
+#Current Working Directory:
+#:D   /home/tannous/projects/openpr/examples/xupv5/counter/counter_sandbox/src/precompiled
+#Host Name:
+#:H   ccm14
+#Date/Time:
+#:T   Mon Feb 21 15:23:59 2011
+#------------------------------
+	#Reading /home/tannous/projects/openpr/examples/xupv5/counter/counter_sandbox/src/precompiled/busmacro_xc5v_async_vert.nmc...
+	#Loading device for application Rf_Device from file '5vsx95t.nph' in environment /opt/system/software/Xilinx/Xilinx11.1/ISE.
+	#   "Y:\BUS_MACROS\busmacro_xc5v_async_vert" is an NCD, version 3.2, device xc5vsx95t, package ff1136, speed -1
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+select -k comp '$COMP_0'

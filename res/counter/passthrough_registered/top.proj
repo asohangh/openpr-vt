@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="5">
+<myProj class_id="0" tracking_level="0" version="0">
+	<designName>top</designName>
+	<projectPath></projectPath>
+	<staticPath>../sandbox</staticPath>
+	<partialPath>../passthrough_registered</partialPath>
+	<isPartial>1</isPartial>
+	<ucfPath>../src/system.ucf</ucfPath>
+	<dynamicAGName>counter</dynamicAGName>
+	<busMacroPrefix>busmacro_xc5v_async_vert</busMacroPrefix>
+	<busMacroNames class_id="1" tracking_level="0" version="0">
+		<count>0</count>
+		<item_version>0</item_version>
+	</busMacroNames>
+	<passThroughNetName>data_reg_i</passThroughNetName>
+	<passThroughNet2>data_reg_o</passThroughNet2>
+	<clkNetNames class_id="1" tracking_level="0" version="0">
+		<count>1</count>
+		<item_version>0</item_version>
+		<item>clk_BUFGP</item>
+	</clkNetNames>
+	<busWidth>8</busWidth>
+	<deviceName>xc5vlx110t-ff1136-1</deviceName>
+	<regionDefined>0</regionDefined>
+	<l_yMin>-1</l_yMin>
+	<l_yMax>-1</l_yMax>
+	<l_xMin>-1</l_xMin>
+	<l_xMax>-1</l_xMax>
+</myProj>
+</boost_serialization>
+

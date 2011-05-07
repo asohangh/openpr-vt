@@ -1,0 +1,90 @@
+#:C29    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   SPARC M2.1 L.68
+#Current Working Directory:
+#:D   /home/tannous/pr_design/XUPV5/video_filters/video_filter_sandbox/src/precompiled
+#Host Name:
+#:H   ccm14
+#Date/Time:
+#:T   Tue Sep 28 12:14:26 2010
+#------------------------------
+	#Loading device for application Rf_Device from file '5vlx110t.nph' in environment /local/Xilinx11.1/ISE.
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+unselect -all
+	#2
+select site 'SLICE_X22Y9'
+	#site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#3
+add
+	#Completed route status: 0 of 0 nets are fully routed.
+	#4
+post attr comp $COMP_0
+	#5
+unpost comp "$COMP_0"
+	#6
+unselect -all
+	#7
+unselect -all
+	#8
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#9
+unselect -all
+	#10
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#11
+post block
+	#<A6LUT>.
+	#12
+setattr comp $COMP_0 A6LUT "A1"
+	#There were no DRC errors or warnings.
+	#<AUSED>.
+	# GetEqnCfgData equation O6
+	#There were no DRC errors or warnings.
+	#13
+setattr comp $COMP_0 Config "A6LUT:#LUT:O6=A1 AUSED:0"
+	#14
+block apply
+	#15
+end block
+	#16
+unselect -all
+	#17
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#18
+unselect -all
+	#19
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#20
+post block
+	#21
+unselect -all
+	#22
+unselect -all
+	#23
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#24
+post attr
+	#25
+unpost comp "$COMP_0"
+	#26
+unselect -all
+	#27
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#28
+unselect -all
+	#29
+select comp '$COMP_0'
+	#comp "$COMP_0",  site "SLICE_X22Y9",  type = SLICEL  (RPM grid X57Y18)
+	#30
+post block
+	#31
+post open

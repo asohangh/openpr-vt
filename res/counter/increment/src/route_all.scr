@@ -1,0 +1,5 @@
+setattr main edit-mode Read-Write
+select net *
+autoroute -all
+save
+exit

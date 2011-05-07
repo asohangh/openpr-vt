@@ -1,0 +1,4 @@
+MODEL "sandbox" box_type="black_box";
+BEGIN MODEL "sandbox"
+	INST "sb" box_type="black_box";
+END;
