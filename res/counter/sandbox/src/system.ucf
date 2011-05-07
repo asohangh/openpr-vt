@@ -2,33 +2,34 @@
 # Constraints from file : 'system.ucf'
 ####################################################################################
 NET "clk" IOSTANDARD = LVCMOS33;
-NET "clk" LOC = AH17;
+NET "clk" LOC = AG18;
 NET "clk" TNM_NET = "clk";
 TIMESPEC TS_clk = PERIOD "clk" 100000 KHz;
+
 NET "reset" TIG;
-NET "reset" IOSTANDARD = LVCMOS33;
+NET "reset" IOSTANDARD = LVCMOS25;
 NET "reset" PULLUP;
-NET "reset" LOC = AJ6;
+NET "reset" LOC = E7;
 
-# XUPV5 switches
-NET  dip<0>  LOC="U25"   |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 15, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<1>  LOC="AG27"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<2>  LOC="AF25"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<3>  LOC="AF26"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<4>  LOC="AE27"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<5>  LOC="AE26"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<6>  LOC="AC25"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET  dip<7>  LOC="AC24"  |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+#  Digilent Genesys System Board
+Net led<0> LOC = AE11  |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<1> LOC = AF11  |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<2> LOC = AG11  |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<3> LOC = AH10  |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<4> LOC = AG10  |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<5> LOC = AH9   |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<6> LOC = AH8   |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
+Net led<7> LOC = AG8   |  IOSTANDARD=LVCMOS33  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2;
 
-# XUPV5 leds
-NET led<0>  LOC="H18"  |  IOSTANDARD=LVCMOS25  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 3, Vcco=2.5V, No DCI
-NET led<1>  LOC="L18"  |  IOSTANDARD=LVCMOS25  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 3, Vcco=2.5V, No DCI
-NET led<2>  LOC="G15"  |  IOSTANDARD=LVCMOS25  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 3, Vcco=2.5V, No DCI
-NET led<3>  LOC="AD26" |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET led<4>  LOC="G16"  |  IOSTANDARD=LVCMOS25  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 3, Vcco=2.5V, No DCI
-NET led<5>  LOC="AD25" |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET led<6>  LOC="AD24" |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
-NET led<7>  LOC="AE24" |  IOSTANDARD=LVCMOS18  |  PULLDOWN  |  SLEW=SLOW  |  DRIVE=2; # Bank 21, Vcco=1.8V, DCI using 49.9 ohm resistors
+# Dipswitches
+Net dip<0> LOC=G15  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<1> LOC=G16  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<2> LOC=K17  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<3> LOC=H17  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<4> LOC=H18  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<5> LOC=K18  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<6> LOC=L18  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
+Net dip<7> LOC=J19  |  IOSTANDARD=LVCMOS25  |  SLEW=SLOW  |  DRIVE=2;
 
 # PlanAhead generated physical constraints 
 AREA_GROUP "counter" RANGE=SLICE_X10Y80:SLICE_X27Y99;

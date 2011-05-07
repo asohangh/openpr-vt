@@ -22,7 +22,7 @@
 		<item>clk_BUFGP</item>
 	</clkNetNames>
 	<busWidth>8</busWidth>
-	<deviceName>xc5vlx110t-ff1136-1</deviceName>
+	<deviceName>xc5vlx50t-ff1136-2</deviceName>
 	<regionDefined>0</regionDefined>
 	<l_yMin>-1</l_yMin>
 	<l_yMax>-1</l_yMax>

@@ -8,7 +8,7 @@ TOP = top
 VERILOG_SOURCES = $(wildcard src/*.v) $(wildcard src/latol/*.v)
 VHDL_SOURCES = $(wildcard src/*.vhd) $(wildcard src/latol/*.vhd)
 
-BITSTREAM_NAME = xupv5_$(TOP)
+BITSTREAM_NAME = genesys_$(TOP)
 
 # Precompiled cores (ngd, ncd, edif, etc):
 PRECOMPILED_DIR   = src/precompiled
@@ -24,7 +24,7 @@ UCF = src/system.ucf
 XCF = src/system.xcf
 
 # Xilinx part #
-PART = xc5vlx110t-ff1136-1
+PART = xc5vlx50t-ff1136-2
 
 # Anticore executable
 ANTICORE = anticore

@@ -93,7 +93,7 @@ architecture top of top is
 
   begin
     process(clk,reset) begin
-      if (reset = '1') then
+      if (reset = '0') then
         data_reg_i <= (others => '0');
         led        <= (others => '0');
       elsif (clk='1' and clk'event) then

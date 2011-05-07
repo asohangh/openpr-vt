@@ -22,7 +22,7 @@ UCF = src/system.ucf
 XCF = src/system.xcf
 
 # Xilinx part #
-PART = xc5vlx110t-ff1136-1
+PART = xc5vlx50t-ff1136-2
 
 # Anticore executable
 ANTICORE = anticore
