@@ -15,6 +15,6 @@ select net data_reg_i<6>
 select net data_reg_o<6>
 select net data_reg_i<7>
 select net data_reg_o<7>
-autoroute -all
+autoroute -resource
 save
 exit
