@@ -30,7 +30,7 @@ PART = xc5vlx110t-ff1136-1
 ANTICORE = anticore
 
 # Torc path
-TORC = $(shell which $(ANTICORE))
+TORC ?= $(shell which $(ANTICORE))
 
 
 

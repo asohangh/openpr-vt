@@ -73,7 +73,13 @@ void openPR::setupAntiCore() {
 		cout << "SetupAntiCoreError" << endl;
 		cerr << err << endl;
 		exit(-1);
-	}
+	} catch (ifstream::failure e) {
+    cerr 
+      << e.what()
+      << ": Unable to open device database file, check OpenPR installation"
+      << endl;
+		exit(-1);
+  }
 }
 /**
  * Setup dimensions of dynamic region based on AREA_GROUPs defined in UCF file.

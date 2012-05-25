@@ -107,7 +107,7 @@ namespace openpr
 			if (xMin == torc::architecture::xilinx::TileRow(-1))
 				throw "CAntiCore:buildSiteMap: Region hasn't been initialized yet";
 			const torc::architecture::Array<
-					const torc::architecture::Sites::Site>& sites =
+					const torc::architecture::Site>& sites =
 					mDB.getSites().getSites();
 			torc::architecture::xilinx::SiteCount siteCount =
 					torc::architecture::xilinx::SiteCount(sites.getSize());
@@ -116,12 +116,12 @@ namespace openpr
 			// Expand region by two so we can prohibit sites that would be blocked by our routing.
 			expandRegion(3);
 			for (i = 0; torc::architecture::xilinx::SiteCount(i) < siteCount; i++) {
-				const torc::architecture::Sites::Site site = sites[i];
+				const torc::architecture::Site site = sites[i];
 				torc::architecture::xilinx::TileIndex ti = site.getTileIndex();
 				if (inRegion(ti))
 					siteMap.insert(std::pair<
 							torc::architecture::xilinx::TileIndex,
-							torc::architecture::Sites::Site>(ti, site));
+							torc::architecture::Site>(ti, site));
 			}
 			// Undo expansion to make our prohibiting easier.
 			shrinkRegion(3);
@@ -391,7 +391,7 @@ namespace openpr
 	 * Generate PROHIBIT constraints that can be copied into the ucf file.
 	 */
 	void AntiCoreBase::blockSites(void) {
-		const torc::architecture::Array<const torc::architecture::Sites::Site>
+		const torc::architecture::Array<const torc::architecture::Site>
 				& sites = mDB.getSites().getSites();
 		boost::uint32_t siteCount = sites.getSize();
 		//torc::architecture::xilinx::SiteCount(sites.size());
@@ -402,7 +402,7 @@ namespace openpr
 			if (xMin == torc::architecture::xilinx::TileCol(-1))
 				throw "CAntiCore:blockSites: Region hasn't been defined yet";
 			for (i = 0; i < siteCount; i++) {
-				const torc::architecture::Sites::Site& site = sites[i];
+				const torc::architecture::Site& site = sites[i];
 				if (inRegion(site.getTileIndex())) {
 					string siteName = site.getName();
 					string siteType = getSiteType(siteName);
@@ -559,7 +559,7 @@ namespace openpr
 					std::string tileName = mTiles.getTileInfo(ti).getName();
 					string tileType = mTiles.getTileTypeName(tti);
 					std::multimap<torc::architecture::xilinx::TileIndex,
-							torc::architecture::Sites::Site>::iterator it;
+							torc::architecture::Site>::iterator it;
 					it = siteMap.find(ti);
 
 					if (siteMap.count(ti) == 0)
@@ -583,7 +583,7 @@ namespace openpr
 							tileToSiteMap::iterator upperBound =
 									siteMap.upper_bound(ti);
 							for (it = siteMap.find(ti); it != upperBound; it++) {
-								const torc::architecture::Sites::Site& site =
+								const torc::architecture::Site& site =
 										it->second;
 								string siteName = site.getName();
 								string siteType = getSiteType(siteName);
@@ -661,14 +661,14 @@ namespace openpr
 	 */
 	torc::architecture::xilinx::TileIndex AntiCoreBase::siteNameToTileIndex(string siteName) {
 		bool found = false;
-		const torc::architecture::Array<const torc::architecture::Sites::Site>
+		const torc::architecture::Array<const torc::architecture::Site>
 				& sites = mDB.getSites().getSites();
 		boost::uint32_t siteCount = torc::architecture::xilinx::SiteCount(
 				sites.getSize());
 
 		boost::uint32_t i = 0;//SiteIndex
 		for (i = 0; i < siteCount; i++) {
-			const torc::architecture::Sites::Site& site = sites[i];
+			const torc::architecture::Site& site = sites[i];
 			if (site.getName() == siteName) {
 				found = true;
 				return site.getTileIndex();
@@ -680,7 +680,7 @@ namespace openpr
 			return torc::architecture::xilinx::TileIndex(-1);
 		}
 
-		const torc::architecture::Sites::Site& site = sites[i];
+		const torc::architecture::Site& site = sites[i];
 		return site.getTileIndex();
 	}
 

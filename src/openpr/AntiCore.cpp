@@ -128,15 +128,9 @@ int main(int argc, char *argv[]) {
 		oa << BOOST_SERIALIZATION_NVP(myProj);
 	} else {
 		std::cerr
-				<< "Warning: incorrect number of parameters, using default dynamic region"
+				<< "Incorrect number of parameters"
 				<< std::endl;
-		// Virtex 5 Testbench
-		torc::architecture::DDB db("xc5vsx95t");
-		// Construct anticore with and blockSites in the same column as bus macro tiles
-		openpr::AntiCoreV5 anticore(db, "TIEOFF_X36Y60", "SLICE_X91Y79");
-		anticore.blockSites();
-		anticore.genPlaceConstraints(8, ucfFile);
-		anticore.blockRoutes();
+    help_menu();
 	}
 };
 
@@ -155,6 +149,29 @@ void help_menu()
 		<< std::endl
 		<< "\t\tanticore <anticore executable location> <project file> <OpenPR operation> <ending_site> <anticore operation>"
 		<< std::endl;
+}
+
+void self_test()
+{
+	std::fstream ucfFile("system.ucf", std::fstream::out);
+  // Virtex 5 Testbench
+  try {
+    std::cout
+      << "Attempting self test"
+      << std::endl;
+		torc::architecture::DDB db("xc5vsx95t");
+		// Construct anticore with and blockSites in the same column as bus macro tiles
+		openpr::AntiCoreV5 anticore(db, "TIEOFF_X36Y60", "SLICE_X91Y79");
+		anticore.blockSites();
+		anticore.genPlaceConstraints(8, ucfFile);
+		anticore.blockRoutes();
+  }
+  catch (std::exception &e) {
+    std::cerr
+      << "Unable to locate device database"
+      << std::endl;
+    exit(-1);
+  }
 }
 
 #endif // ADB_CANTICORE_H

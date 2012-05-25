@@ -60,11 +60,16 @@ PHYSICAL_REFERENCES = \
 
 all: databases anticore
 
+install: all
+	install -D anticore /usr/local/bin/anticore
+	install -d /usr/local/share/openpr
+	cp -r torc/devices /usr/local/share/openpr/
+
 anticore: torc databases openpr
 	g++ \
-				$(LDFLAGS) \
-				$(REAL_OBJECTS) \
 				openpr/AntiCore.o \
+				$(REAL_OBJECTS) \
+				$(LDFLAGS) \
 				-o anticore \
 				$
 
@@ -91,7 +96,7 @@ devices:
 	mkdir devices
 
 devices/%.db: torc/devices/%.db
-	cp $< $@
+	ln -sf $< $@
 
 
 # clean everything

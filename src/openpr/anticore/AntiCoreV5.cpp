@@ -31,7 +31,7 @@ namespace openpr
 		cout << "There are " << siteMap.count(ti)
 				<< " elements in siteMap matching tileIndex" << ti << endl;
 		for (it = siteMap.find(ti); it != upperBound; it++) {
-			const torc::architecture::Sites::Site& site = it->second;
+			const torc::architecture::Site& site = it->second;
 			string siteName = site.getName();
 			string siteType = getSiteType(siteName);
 			prohibitRange siteRange(siteName, siteName);
@@ -113,7 +113,7 @@ namespace openpr
 							mTiles.getTileInfo(ti).getTypeIndex();
 					string tileType = mTiles.getTileTypeName(tti);
 					std::multimap<torc::architecture::xilinx::TileIndex,
-							torc::architecture::Sites::Site>::iterator it;
+							torc::architecture::Site>::iterator it;
 
 					//cout << "(" << row << "," << col << ")" << " is " << mTiles.mTiles[ti].getName() << endl;
 					string macroName;
