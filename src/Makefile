@@ -96,7 +96,7 @@ devices:
 	mkdir devices
 
 devices/%.db: torc/devices/%.db
-	ln -sf $< $@
+	ln -sf ../$< $@
 
 
 # clean everything
