@@ -92,9 +92,9 @@ void openPR::setupDynamicRegion() {
 		fullUcfPath = fullUcfPath / ucfPath;
 		fullUcfPath.normalize();
 
-		cerr << "Opening file " << fullUcfPath.file_string() << endl;
+		cerr << "Opening file " << fullUcfPath.string() << endl;
 
-		fstream ucfFile(fullUcfPath.file_string().c_str(), fstream::in);
+		fstream ucfFile(fullUcfPath.string().c_str(), fstream::in);
 		if (!ucfFile.good())
 			throw "COpenPR:siteBlocker: Unable to open UCF file for read.";
 		if (dynamicAGName == "")
@@ -136,7 +136,7 @@ bool openPR::placeMacros() {
 		fullUcfPath = get_current_dir_name();
 		fullUcfPath = fullUcfPath / ucfPath;
 		fullUcfPath.normalize();
-		fstream ucfFile(fullUcfPath.file_string().c_str(), fstream::out
+		fstream ucfFile(fullUcfPath.string().c_str(), fstream::out
 				| fstream::app);
 		if (!ucfFile.good())
 			throw "COpenPR:placeMacros: Unable to open UCF file for write.";
@@ -206,7 +206,7 @@ bool openPR::siteBlocker() {
 		fullUcfPath = fullUcfPath / ucfPath;
 		fullUcfPath.normalize();
 
-		fstream ucfFile(fullUcfPath.file_string().c_str(), fstream::out
+		fstream ucfFile(fullUcfPath.string().c_str(), fstream::out
 				| fstream::app);
 		if (!ucfFile.good())
 			throw "COpenPR:siteBlocker: Unable to open UCF file for write.";
