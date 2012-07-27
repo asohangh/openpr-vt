@@ -15,6 +15,70 @@ namespace openpr
 namespace bitstream
 {
 
+const string xc5vfx70t::xc5vfx70t_name = "XC5VFX70T";
+const int
+ xc5vfx70t::xc5vfx70t_id = 0x32C6093;
+const tile_types
+ xc5vfx70t::xc5vfx70t_row_layout[57] = {
+    IOB,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    BRAM_INT,
+    BRAM,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    BRAM_INT,
+    BRAM,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    BRAM_INT,
+    BRAM,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    IOB,
+    GCLK,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    BRAM_INT,
+    BRAM,
+    CLB,
+    CLB,
+    DSP48,
+    CLB,
+    CLB,
+    DSP48,
+    CLB,
+    CLB,
+    BRAM_INT,
+    BRAM,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    IOB,
+    CLB,
+    CLB,
+    CLB,
+    CLB,
+    BRAM_INT,
+    BRAM,
+    TRANSCV,
+};
+
 const string xc5vlx50::xc5vlx50_name = "XC5VLX50";
 const int
  xc5vlx50::xc5vlx50_id = 0x2896093;
@@ -268,7 +332,7 @@ const tile_types
     CLB,
     BRAM_INT,
     BRAM,
-		TRANSCV,
+    TRANSCV,
 };
 }
 }

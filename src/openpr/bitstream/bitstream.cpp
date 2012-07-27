@@ -43,7 +43,8 @@ bitstream::bitstream(string device_name, bool frame_ecc) :
 		my_dev = new xc5vsx95t();
 	else if (device_name == "xc5vlx110t")
 		my_dev = new xc5vlx110t();
-
+	else if (device_name == "xc5vfx70t")
+		my_dev = new xc5vfx70t();
 	else
 		fprintf(stderr, "Error, device %s is not supported\n",
 				device_name.c_str());

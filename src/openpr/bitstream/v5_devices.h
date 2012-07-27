@@ -70,6 +70,19 @@ class xc5vlx110t:public virtex5 {
 	build_xdl_layout();
     };
 };
+
+class xc5vfx70t:public virtex5 {
+  protected:
+    enum { xc5vfx70t_num_rows = 8, xc5vfx70t_num_cols = 57, };
+    static const tile_types xc5vfx70t_row_layout[];
+    static const string xc5vfx70t_name;
+    static const int xc5vfx70t_id;
+  public:
+     xc5vfx70t():virtex5(xc5vfx70t_num_rows, xc5vfx70t_num_cols,
+			xc5vfx70t_row_layout, xc5vfx70t_name, xc5vfx70t_id) {
+	build_xdl_layout();
+    };
+};
 }
 }
 
