@@ -8,6 +8,8 @@
 # 
 # You should have received a copy of the GNU General Public License along with this program.  If 
 # not, see <http://www.gnu.org/licenses/>.
+SRC_DIR = `pwd`
+TORC_DIR ?= torc/torc
 
 LDFLAGS = \
 				-L/usr/lib64 \
@@ -25,12 +27,7 @@ LDTESTFLAGS = \
 				$
 
 REAL_OBJECTS = \
-				@torc/architecture/RealObjectFileList \
-				@torc/common/RealObjectFileList \
-				@torc/externals/zlib/RealObjectFileList \
-				@torc/physical/RealObjectFileList \
-				@torc/physical/xdl/RealObjectFileList \
-				@torc/utils/RealObjectFileList \
+				@torc/TorcRealObjects \
 				@openpr/anticore/RealObjectFileList \
 				@openpr/bitstream/RealObjectFileList \
 				@openpr/netlist/RealObjectFileList \
@@ -63,7 +60,7 @@ all: databases anticore
 install: all
 	install -D anticore /usr/local/bin/anticore
 	install -d /usr/local/share/openpr
-	cp -r torc/devices /usr/local/share/openpr/
+	cp -r $(TORC_DIR)/devices /usr/local/share/openpr/
 
 anticore: torc databases openpr
 	g++ \
@@ -75,7 +72,8 @@ anticore: torc databases openpr
 
 # make the torc subdirectory
 torc:
-	make -C torc
+	make -C torc $(TORC_REAL_OBJS) -j8
+	make -C torc $(TORC_REAL_OBJS_FILE)
 openpr: 
 	make -C openpr
 

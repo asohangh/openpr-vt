@@ -1,0 +1,12 @@
+Index: torc/Makefile.targets
+===================================================================
+--- torc/Makefile.targets	(revision 20)
++++ torc/Makefile.targets	(working copy)
+@@ -56,7 +56,6 @@
+ 	-x c++ \
+ 	-g \
+ 	-Wall \
+-	-Werror \
+ 	$(TORC_INCLUDE_DIR_OPTION) \
+ 	$(BOOST_INCLUDE_DIR_OPTION) \
+ 	$

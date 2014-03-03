@@ -11,6 +11,7 @@
 
 THIS_DIR = openpr/anticore
 SRC_DIR = ../..
+TORC_DIR = $(SRC_DIR)/torc
 BOOST_INCLUDE_DIR = /usr/local/include/boost-1_42
 
 # C++ flags -- enable or disable -O3 as needed for sanity
@@ -19,6 +20,7 @@ CCFLAGS = \
 				-g \
 				-Wall \
 				-I$(SRC_DIR) \
+				-I$(TORC_DIR) \
 				-I$(BOOST_INCLUDE_DIR) \
 				$
 

@@ -1,0 +1,37 @@
+Instructions for building and running OpenPR:
+cd src/
+# setup boost env variables for TORC, these locations work for Ubuntu 13.10
+export BOOST_INCLUDE_DIR=/usr/include/boost
+export BOOST_LIB_DIR=/usr/lib
+make
+sudo bash
+# if you want to install, it is not necessary
+export BOOST_INCLUDE_DIR=/usr/include/boost
+export BOOST_LIB_DIR=/usr/lib
+make install
+
+I got some errors building TORC with Ubuntu 13.10 with g++ 4.8.1, there is
+a patch to disable the -Werror flag called torc.patch, apply it if you get
+errors about unused local typedefs.
+
+To build the example designs:
+cd res/counter/sandbox/
+# source Xilinx script from wherever you installed it
+source $(XILINX_DIR)/xilinx64.sh 
+# don't use Xilinx's ancient libraries
+unset LD_LIBRARY_PATH
+# Tell the makefile where to find TORC device files if you ran make install
+export TORC=/usr/local/share/openpr
+# or if you didn't run make install you can tell the Makefile where the anticore executable resides
+# it will figure out the database directory automatically
+export PATH={Path to openpr repo}/src/:$PATH
+# build sandbox
+make
+cd ../increment
+# build increment counter
+make partial
+cd ../decrement
+# build increment counter
+make partial
+
+
