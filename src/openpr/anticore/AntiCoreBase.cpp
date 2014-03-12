@@ -88,6 +88,7 @@ namespace openpr
 			}
 		}
 	}
+
 	std::string AntiCoreBase::exportPipFromArc(torc::architecture::Tilewire source, torc::architecture::Tilewire sink, torc::architecture::DDB& mDB)
 	{
 		std::stringstream temp;
@@ -98,6 +99,16 @@ namespace openpr
 				<< sourceWireInfo.mWireName << " -> "
 				<< sinkWireInfo.mWireName;
 		return temp.str();
+	}
+
+	torc::physical::Pip AntiCoreBase::createPipFromArc(torc::architecture::Tilewire source, torc::architecture::Tilewire sink, torc::architecture::DDB& mDB)
+	{
+		using torc::architecture::ExtendedWireInfo;
+		std::stringstream temp;
+		ExtendedWireInfo sourceWireInfo = ExtendedWireInfo(mDB, source);
+		ExtendedWireInfo sinkWireInfo = ExtendedWireInfo(mDB, sink);
+
+		return	torc::physical::Factory::newPip(sourceWireInfo.mTileName, sourceWireInfo.mWireName, sinkWireInfo.mWireName, torc::physical::ePipUnidirectionalBuffered);
 	}
 	/**
 	 * Build map between tile index and sites contained within.
@@ -848,13 +859,8 @@ namespace openpr
 										//	sources_buf[sbIndex], wires_buf[z]);
 ;
 									cout << pipString;
-									if (placedXDLInput) {
-										openpr::netlist::Pip* tempPip =
-												new openpr::netlist::Pip(
-														pipString, &mDB);
-										placedXDLInput->insertPip(blockingNet,
-												tempPip);
-									}
+									if(*netPtr)
+										(*netPtr)->addPip(createPipFromArc(sources_buf[sbIndex],wires_buf[z],mDB));
 									done = true;
 								}
 								// If current source isn't used, enable the pip and add it to the NetList
@@ -959,13 +965,8 @@ namespace openpr
 								//	sources_buf[sbIndex], wires_buf[z]);
 								;
 								cout << pipString;
-								if (placedXDLInput) {
-									openpr::netlist::Pip* tempPip =
-											new openpr::netlist::Pip(pipString,
-													&mDB);
-									placedXDLInput->insertPip(blockingNet,
-											tempPip);
-								}
+								if(*netPtr)
+									(*netPtr)->addPip(createPipFromArc(sources_buf[sbIndex],wires_buf[z],mDB));
 								done = true;
 							}
 							// If current source isn't used, enable the pip and add it to the NetList
@@ -1123,21 +1124,31 @@ namespace openpr
 			if (placedXDLPath != "" && blockingNetName == "")
 				throw "CAntiCoreBase::blockRoutes: Can't add blocking routes to netlist without name of net to add to";
 
+			torc::physical::DesignSharedPtr designPtr;
+
 			if (placedXDLPath != "") {
-				placedXDLInput = new openpr::netlist::NetList(placedXDLPath,
-						blockedXDLPath, &mDB);
-				blockingNet = placedXDLInput->findNet(blockingNetName);
-				if (!blockingNet) {
-					delete placedXDLInput;
-					placedXDLInput = NULL;
-					throw "CAntiCoreBase::blockRoutes: Couldn't find blocking net in supplied XDL file.";
+				// Import the placed XDL Design
+				openpr::xdl::XdlImporter importer(&mDB);
+				boost::filesystem::path pPath(placedXDLPath);
+				importer(pPath);
+				designPtr = importer.getDesignPtr();
+				// Find the blocking net of interest
+				string strippedName = blockingNetName.substr(1, blockingNetName.size()-2);
+				netPtr = designPtr->findNet(strippedName);
+				if(netPtr == designPtr->netsEnd()) {
+					std::cout << "Did not find net " << strippedName << std::endl;
+					return;
+				}
+				else {
+					std::cout << "Blocking pips will be added to net " << (*netPtr)->getName() << std::endl;
 				}
 			}
 			blockRoutes();
-			if (placedXDLInput) {
-				placedXDLInput->printData(placedXDLInput->outputXDL);
-				delete placedXDLInput;
-			}
+			// Export the route-blocked design
+			std::fstream xdlExport(blockedXDLPath.c_str(), std::ios_base::out);
+			torc::physical::XdlExporter fileExporter(xdlExport);
+			fileExporter(designPtr);
+			(*netPtr).reset();
 		} catch (const char* err) {
 			cerr << err << endl;
 			exit(-1);

@@ -19,8 +19,10 @@
 #include <string>
 #include <ctype.h>
 #include "torc/Architecture.hpp"
+#include "torc/Physical.hpp"
 #include "openpr/anticore/ProhibitRange.hpp"
 #include "openpr/netlist/NetList.h"
+#include "openpr/netlist/XdlImporter.hpp"
 #include <boost/dynamic_bitset.hpp>
 #include <boost/unordered_map.hpp>
 #include <boost/regex.hpp>
@@ -82,10 +84,8 @@ protected:
 	/** Maps between the uniquely generated name of the bus macro and the type of bus macro. */
 	bmNameToTypeMap busMacroMap;
 
-	/** Pointer to NetList object representing a post-place XDL netlist to be route blocked. */
-	openpr::netlist::NetList* placedXDLInput;
-	/** Pointer to Net object representing the net on which we will insert blocking pips. */
-	openpr::netlist::Net* blockingNet;
+	/** Pointer to Net within XDL design. */
+  torc::physical::Circuit::NetSharedPtrIterator netPtr;
 
 	/** Mask representing which tiles are within the region and which are without. */
 	int** mask;
@@ -123,6 +123,11 @@ public:
 	 */
 	void buildValidBoundaries(const int tilesPerRegion);
 	std::string exportPipFromArc(torc::architecture::Tilewire source, torc::architecture::Tilewire sink, torc::architecture::DDB& mDB);
+	/**
+	 * Create a torc::physical pip from Arc information.
+	 * @todo maybe this doesn't belong here...
+	 */
+	torc::physical::Pip createPipFromArc(torc::architecture::Tilewire source, torc::architecture::Tilewire sink, torc::architecture::DDB& mDB);
 	/**
 	 * Build map between tile index and sites contained within.
 	 */
